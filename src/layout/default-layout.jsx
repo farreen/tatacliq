@@ -15,7 +15,7 @@ const DefaultLayout = ({ props }) => {
           </Suspense>
         </div>
 
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

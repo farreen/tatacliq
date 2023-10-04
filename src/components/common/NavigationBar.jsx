@@ -1,32 +1,38 @@
 import React, { useEffect, useState } from "react";
 import useRedirect from "../../custom-hooks/common/useRedirect";
+import logo from '../../assets/images/logo.svg';
 // import { HiMenu } from "react-icons/hi";
 // import { RxCross2 } from "react-icons/rx";
 
 const navItems = [
   {
     id: 0,
-    name: "home",
+    name: "Tata CLiQ Luxury",
     path: ""
   },
   {
     id: 1,
-    name: "Tales of Startups",
-    path: "tales-of-startups"
+    name: "CLiQ Cash",
+    // path: "tales-of-startups"
   },
   {
     id: 2,
-    name: "Infographics",
+    name: "Gift Card",
     path: ""
   },
   {
     id: 3,
-    name: "Glossary",
+    name: "CLiQ Care",
     path: ""
   },
   {
     id: 4,
-    name: "Blogs",
+    name: "Track Orders",
+    path: ""
+  },
+  {
+    id: 4,
+    name: "Sign in/Sign up",
     path: ""
   },
 ];
@@ -60,26 +66,26 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
   return (
     <>
       <nav
-        className={`bg-white w-screen border-gray-200 mb-4 ${
+        className={`bg-black w-screen border-gray-200 mb-4 ${
           scrollPosition > 0
-            ? "fixed w-full z-20 top-0 left-0 dark:bg-green-500 opacity-100"
-            : "bg-transparent"
+            ? "fixed w-full z-20 top-0 left-0 dark:bg-black-500 opacity-100"
+            : "bg-black"
         } transition-color duration-1000 ease-in`}
       >
         <div className="flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" className="flex items-center">
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
+              src={logo}
               className="h-8 mr-3"
               alt="Flowbite Logo"
             />
-            <span
+            {/* <span
               className={`self-center text-2xl font-semibold whitespace-nowrap ${
                 scrollPosition > 0 ? "text-white" : "text-black"
               }`}
             >
               Tales of Finice
-            </span>
+            </span> */}
           </a>
           <button
             data-collapse-toggle="navbar-default"
@@ -95,6 +101,7 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
                 viewBox="0 0 50 50"
                 width="50px"
                 height="50px"
+                fill="#fff"
               >
                 <path d="M 9.15625 6.3125 L 6.3125 9.15625 L 22.15625 25 L 6.21875 40.96875 L 9.03125 43.78125 L 25 27.84375 L 40.9375 43.78125 L 43.78125 40.9375 L 27.84375 25 L 43.6875 9.15625 L 40.84375 6.3125 L 25 22.15625 Z" />
               </svg>
@@ -104,6 +111,7 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
                 viewBox="0 0 50 50"
                 width="50px"
                 height="50px"
+                fill="#fff"
               >
                 <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z" />
               </svg>
@@ -133,6 +141,9 @@ const NavBar = ({ toggleDarkMode, darkMode }) => {
                   </a>
                 </li>
               ))}
+             <div>
+             <input type="text"/>
+             </div>
             </ul>
           </div>
         </div>
